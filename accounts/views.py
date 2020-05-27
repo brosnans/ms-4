@@ -1,10 +1,9 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages, auth
-from django.core.urlresolvers import reverse
+from django.core.urlresolvers import reverse_lazy
 from .forms import UserLoginForm, UserRegistrationForm
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
-
 
 # Create your views here.
 def index(request):
