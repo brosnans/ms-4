@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/brosnans/ms-4.svg?branch=master)](https://travis-ci.org/brosnans/ms-4)
+
 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
 
 Welcome brosnans,
