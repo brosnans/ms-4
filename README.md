@@ -19,13 +19,14 @@ App available at
 In this project, you'll build a full-stack site based around business logic used to control a centrally-owned dataset.
 You will set up an authentication mechanism and provide paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product/service.
 
-**CREATE AN APPLICATION WHICH CAN BE USED FOR THE PURCHASE OF COLLECTABLE ADN RARE SOCCER BOOTS**
+**CREATE AN APPLICATION WHICH CAN BE USED FOR THE PURCHASE OF COLLECTABLE AND RARE SPORTS FOOTWEAR**
 
 Build a web application that allows users to view and purchase collectable and rare soccer boots.
 
-- The user is presented with a form to enter details about the accident or incident.
-- Users enter accident/ incident details into a text area and submit their report using a form.
-- Multiple players can play an instance of the game at the same time. Users are identified by a unique username.
+- The user is presented with a selection of the products which are for sale
+- Users can browse the selection of the products which are for sale
+- Users can add desired products to a shopping cart for purchase
+- Users can purchase and pay for pruducts via a simple payment form
 
 ## 2. Technologies
 
