@@ -33,14 +33,15 @@ Build a web application that allows users to view and purchase collectable and r
 Backend
 
  - Python3
- - Flask
+ - django
 
 Frontend
 
  - HTML5
  - CSS3
- - Materialize v1.0.0
- - jQuery v3.3.1
+ - Bootstrap v3.3.7
+ - jQuery v3.2.1
+ - Font Awesome v4.7
 
 Version Control
 
@@ -49,17 +50,17 @@ Version Control
 
 Database Management
 
- - MongoDB
+ - SQLite
 
 ## 3. Workspace
 
 **Operating System** - [Windows 10](https://en.wikipedia.org/wiki/Windows_10)
 
-**Editor** - [Visual Studio Code](https://gitpod.io)
+**Editor** - [Gitpod](https://gitpod.io)
 
 **Language** - [Python3](https://www.python.org), [HTML5](https://en.wikipedia.org/wiki/HTML), [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets), [Javascript](https://en.wikipedia.org/wiki/JavaScript)
 
-**Microframework** - [Flask](http://flask.pocoo.org)
+**Microframework** - [django](https://www.djangoproject.com/)
 
 **Testing**	- [Unittest](https://docs.python.org/3/library/unittest.html)
 
@@ -71,7 +72,7 @@ Database Management
 -   Create wireframes
 -   Setup Gitpod for Python
 -   Install pip3
--   Install flask
+-   Install django
 -   Create requirements.txt
 -   Create app.py
 -   Get Flask app up and running
