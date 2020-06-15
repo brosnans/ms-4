@@ -74,10 +74,11 @@ Database Management
 -   Install pip3
 -   Install django
 -   Create requirements.txt
--   Create app.py
--   Get Flask app up and running
+-   Create manage.py
+-   Get django app up and running
 -   Make it look nice - complete Surface plane of UXD
 -   Deploy app to Heroku
+-   Deploy AWS S3 for media
 
 ## 5. UXD
 
@@ -85,23 +86,23 @@ Database Management
 
 | Focus                                                       | User Needs                                                            | Business Objectives                             |
 |-------------------------------------------------------------|-----------------------------------------------------------------------|-------------------------------------------------|
-| _What are you aiming to achieve?_                           | Report accidents/ incidents                                           | Report accidents/ incidents                     |
-|                                                             | Keep records of reports on database                                   | Keep records of accident/ incident reports      |
-| _For whom?_                                                 | Categorise accidents/ incidents                                       |                                                 |
-| _TARGET AUDIENCE:_                                          | Add due dates for accident/ incident investigations                   |                                                 |
-| People who need to record workplace accidents/ incidents    |                                                                       |                                                 |
+| _What are you aiming to achieve?_                           | View products                                                         | Allow customers to view products                |
+|                                                             | Add products to shopping cart                                         | Allow customers to pay for and purchase products|
+| _For whom?_                                                 | Pay for products from shopping carts using simple payment form        |                                                 |
+| _TARGET AUDIENCE:_                                          | Add and remove items from shopping cart                               |                                                 |
+| People who wish to purchase collectible sporting goods      |                                                                       |                                                 |
 |                                                             |                                                                       |                                                 |
 
 #### Scope
 
 | Focus                                                       | Functional Specification                                              | Content Requirements                            |
 |-------------------------------------------------------------|-----------------------------------------------------------------------|-------------------------------------------------|
-| Which features?                                             | Choose accident type/ category from a list                            | Select category dropdown and button             |
-| What’s on the table?                                        | Display accident/ incident records                                    | Report text                                     |
-|                                                             | Enter an accident                                                     | Accident details input                          |
-|                                                             | Return incorrect answer                                               | Submit report button                            |
-|                                                             | Store accident/ incident report details                               |                                                 |
-|                                                             | Show list of accident/ incident reports                               |                                                 |
+| Which features?                                             | Browse available products that are for sale                           | Scroll through products                         |
+| What’s on the table?                                        | Add desired product to shopping cart                                  | Select product button                           |
+|                                                             | Pay for products in shopping cart using simple payment form           | Shopping cart                                   |
+|                                                             |                                                                       | Product payment form                            |
+|                                                             |                                                                       |                                                 |
+|                                                             |                                                                       |                                                 |
 |                                                             |                                                                       |                                                 |
 |                                                             |                                                                       |                                                 |
 
@@ -110,10 +111,10 @@ Database Management
 | Focus                                                       | Interaction Design                                                           | Information Architecture                                                                |
 |-------------------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | _How is the information structured?_                        | _Where am I? / How did I get here? / What can I do here? / Where can I go?_  | _Organizational / Navigational schemas (tree / nested list / hub and spoke / dashboard)_|
-|                                                             | Incident Log > View incident details                                         | Tree structure                                                                          |
-| _How is it logically grouped?_                              | Add New Incident > REport Details of Incident                                |                                                                                         |
-|                                                             | Manage Categories > Add Incident Categories                                  |                                                                                         |
-|                                                             | Mark Incident Closed > End                                                   |                                                                                         |
+|                                                             | Browse products > View Products                                              | Tree structure                                                                          |
+| _How is it logically grouped?_                              | Add Product to Shopping Cart > View Shopping Cart                            |                                                                                         |
+|                                                             | Payment Form > Pay for Product                                               |                                                                                         |
+|                                                             | Product Ordered                                                              |                                                                                         |
 |                                                             |                                                                              |                                                                                         |
 
 #### Skeleton
@@ -134,13 +135,7 @@ Database Management
 
 ### 6 Wireframes
 
-https://github.com/brosnans/msp-3/blob/master/static/wireframes/%231.JPG
 
-https://github.com/brosnans/msp-3/blob/master/static/wireframes/%232.JPG
-
-https://github.com/brosnans/msp-3/blob/master/static/wireframes/%233.JPG
-
-https://github.com/brosnans/msp-3/blob/master/static/wireframes/%234.JPG
 
 ### 7 Testing
 
@@ -150,19 +145,19 @@ https://github.com/brosnans/msp-3/blob/master/static/wireframes/%234.JPG
 
 ### 8 Heroku Deployment
 
-1. Create a new app 'incident-manager-flask-mongo' on heroku.com
+1. Create a new app 'ms4-ecommerce' on heroku.com
 
 2. Install [Heroku CLI](https://devcenter.heroku.com/categories/command-line)
     - $ brew install heroku/brew/heroku
 
-3. Login to heroku with email abd password
+3. Login to heroku with email and password
     - $ heroku login
 
 4. Check app is there
     - $ heroku apps
 
 5. Add heroku remote
-    - $ heroku git:remote -a incident-manager-flask-mongo
+    - $ heroku git:remote -a ms4-ecommerce
 
 6. Add Procfile (this tells heroku what to do with the project)
     - $ echo web: python app.py > Procfile
@@ -182,14 +177,18 @@ https://github.com/brosnans/msp-3/blob/master/static/wireframes/%234.JPG
 ### 9 How To Deploy Locally
 
 ```console
-$ git clone git@github.com/brosnans/msp-3
-$ cd msp-3
+$ git clone git@github.com/brosnans/ms-4
+$ cd ms-4
 $ pip3 install -r requirements.txt
-$ python3 app.py
+$ python3 manage.py
 ```
 
 ### Acknowledgements
 
 This is for educational use.
 
-Referenced https://github.com/Code-Institute-Solutions/TaskManager for information purposes.
+Referenced https://github.com/Code-Institute-Solutions/PuttingItAllTogether-Ecommerce for information purposes.
+
+Stripe integration added with help from this tutorial -
+
+http://zabana.me/notes/how-to-integrate-stripe-with-your-django-app.html
