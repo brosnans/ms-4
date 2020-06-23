@@ -1,1 +1,1 @@
-web: gunicorn ms-4.wsgi:application
+web: gunicorn ms4ecommerce.wsgi:application
