@@ -3,6 +3,10 @@ body {
     padding-top: 100px;
 }
 
+.navbar-brand {
+    color: red;
+}
+
 footer {
     margin-top: 40px;
     padding-top: 20px;
